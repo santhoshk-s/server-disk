@@ -15,6 +15,7 @@ const homeRoutes = require('./routes/homeRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
 const app = express();
 const url = process.env.ATLAS_URL;
+const PORT = process.env.PORT || 8001;
 
 // Middleware
 app.use(cors());
@@ -49,7 +50,6 @@ app.use((err, req, res, next) => {
 
 
 // Start the server
-const PORT =  8001;
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}`);
 });
